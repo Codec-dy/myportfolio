@@ -7,7 +7,7 @@ const ProjectCard = ({img,title,description,id,index,link}) => {
   const { setProjectId } = useContext(PortfolioContext);
   
   return (
-    <Link to={link?link:`/mbalisportfolio/project/${id}`} onClick={()=>setProjectId(id)} className="h-fit justify-items-center">
+    <Link to={link?link:`/project/${id}`} onClick={()=>setProjectId(id)} className="h-fit justify-items-center">
       <div className={`relative text-left  ${index===1?'lg:h-[500px]':'lg:h-[450px]'} py-4 w-[320px] border-b border-t-0 transition-all duration-[200ms] before:content-[""] before:absolute before:top-0 before:left-0 before:right-0 before:h-[1px] before:bg-current before:scale-x-0 before:origin-left before:transition-transform before:duration-[500ms] hover:before:scale-x-100 `}>
         <div className='overflow-hidden'><img src={img} alt={title} className='w-full object-cover rounded-lg hover:scale-120 transition-all max-h-[200px] duration-[500ms]'/></div>
         <h3 className=' font-semibold my-4'>{title}</h3>

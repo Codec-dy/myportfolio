@@ -29,12 +29,11 @@ import bgInfoPic from './bgInfoPic.jpg'
 import eduPic from './eduPic.webp'
 import skillsPic from './skillsPic.jpg'
 import hobPic from './hobPic.jpg'
-
+import mbalisPortfolio from '../projects/mbalisportfolio.png'
+import ecommerce from '../projects/ecommerce.png'
 
 
 export const graphicDesignImages = []
-// const graphicDesignImages = import.meta.glob('../projects/graphicDesign/*.{png,jpg,jpeg,svg}', { eager: true });
-// export { graphicDesignImages };
 
 export const assets = {
    address,
@@ -64,10 +63,10 @@ export const projects = [
         id: 1,
         title: 'Ecommerce Project',
         category: 'Web development',
-        description: 'This vibrant and energetic commercial captures the essence of Twisted Tea, showcasing its unique taste and the fun-loving lifestyle it represents. With lively visuals and an upbeat tone, the ad emphasizes the brand’s message of embracing life’s simple pleasures with a refreshing twist.',
-        img: background1,
+        description: 'This responsive e-commerce website provides a seamless and user-friendly shopping experience. It features a modern and intuitive design, showcasing a variety of products with detailed descriptions, prices, and high-quality images. It provides dynamic product listings with filtering options for easy navigation, Fully optimized for desktop and mobile devices, Smooth transitions and animations for an engaging interface.',
+        img: ecommerce,
         vid: '',
-        link:'https://codec-dy.github.io/ecommerce',
+        projlink:'https://codec-dy.github.io/ecommerce',
         images:[],
         techUsed: 'Reactjs, tailwindcss, vite, VScode',
     },
@@ -75,17 +74,17 @@ export const projects = [
         id: 2,
         title: 'Portfolio Project',
         category: 'Web Development',
-        description: 'This documentary follows the inspiring journey of a passionate community leader and Earlham alumnus as they work to establish a makerspace in Richmond. Through resilience and vision, they transform a vacant building into a thriving hub for creativity, education, and entrepreneurship. The film highlights the challenges of bringing this dream to life, showcasing the power of community, resourcefulness, and determination in fostering innovation and collaboration.',
-        img: background1,
+        description: 'This sleek and modern portfolio website showcases my skills, projects, and experiences in web development and programming. Designed with a clean and intuitive layout, it effectively highlights my clients professional journey and creative work.It is fully optimized for desktop and mobile devices, ensuring accessibility across all platforms',
+        img: mbalisPortfolio,
         vid: '',
-        link:'https://codec-dy.github.io/mbalisportfolio/',
+        projlink:'https://codec-dy.github.io/mbalisportfolio/',
         techUsed: 'Reactjs, tailwindcss, vite, VScode',
     },
     {
         id: 3,
         title: 'Graphic Design',
         category: 'Designs',
-        description: 'This short film is a visually stunning and emotionally evocative interpretation of my poem, which envisions a world guided by kindness. Through a seamless blend of striking imagery and immersive sound design, the film brings each verse to life, inviting viewers to reflect on the power of compassion. It explores the beauty of a world where empathy reigns, offering a heartfelt reminder of our shared humanity.',
+        description: 'This collection showcases my skills in graphic design, focusing on the art of poster creation. Each design blends creativity, typography, and visual storytelling to deliver compelling messages. From bold event promotions to thought-provoking concepts, my work reflects a keen eye for aesthetics and effective communication.',
         img: background1,
         vid: background1,
         techUsed: 'Adobe Illustrator, Adobe Photoshop, Figma, Canva',
