@@ -6,7 +6,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css'
 import LettersPullUp from './LettersPullUp'
 const AboutCard = ({colType,title,text,img}) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
   return (
     <div className={`w-full flex flex-col ${colType} items-start gap-2 max-w-[720px] justify-center m-auto`}>
         <motion.div 
