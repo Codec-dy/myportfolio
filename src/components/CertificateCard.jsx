@@ -10,8 +10,8 @@ const CertificateCard = ({id,title,institute,date,img,txt, link}) => {
     const [displayCert, setDisplayCert] = useState(false)
     return (
     <React.Fragment>
-    <Link to={link?'/certificate':''} onClick={()=>{setCert(id); setDisplayCert(link?false:true)}}   className="h-fit"><div className='h-[430px] max-h-[450px] relative text-left py-4 w-[320px] border-b border-t-0 transition-all duration-[200ms] before:content-[""] before:absolute before:top-0 before:left-0 before:right-0 before:h-[1px] before:bg-current before:scale-x-0 before:origin-left before:transition-transform before:duration-[500ms] hover:before:scale-x-100'>
-        <div className='overflow-hidden '><img src={img?img:assets.completed} alt={title} className='w-full object-cover rounded-lg hover:scale-120 transition-all duration-[500ms]'/></div>
+    <Link target="_blank" to={link} onClick={()=>{setCert(id); setDisplayCert(link?false:false)}}   className="h-fit"><div className='h-[430px] max-h-[450px] relative text-left py-4 w-[320px] border-b border-t-0 transition-all duration-[200ms] before:content-[""] before:absolute before:top-0 before:left-0 before:right-0 before:h-[1px] before:bg-current before:scale-x-0 before:origin-left before:transition-transform before:duration-[500ms] hover:before:scale-x-100'>
+        <div className='overflow-hidden '><img src={img} alt={title} className='w-full object-cover rounded-lg hover:scale-120 transition-all duration-[500ms]'/></div>
         <h3 className=' font-semibold my-4'>{title}</h3>
         <p className='text-gray-500 text-sm'>{institute}</p>
         <p className='text-gray-500 text-sm'>{txt}</p>

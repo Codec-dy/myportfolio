@@ -4,7 +4,7 @@ import { certificates } from '../assets/assets';
 import { PortfolioContext } from '../context/portfolioContext';
 
 const Certificate = () => {
-    const {cert} = useContext(PortfolioContext)
+    const {cert,api} = useContext(PortfolioContext)
     const  [certificate, setCertificate] = useState(null)
     
     useEffect(() => {  

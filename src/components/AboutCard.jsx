@@ -21,8 +21,8 @@ const AboutCard = ({colType,title,text,img}) => {
         <motion.div
         
         className='flex flex-col w-full sm:w-1/2'>
-            <p className='text-gray-700 text-2xl font-semibold'>{title && <LettersPullUp text={title} />}</p>
-            <p className='text-gray-500 text-sm'>{text}</p>
+            <div className='text-gray-700 text-2xl font-semibold'>{title && <LettersPullUp text={title} />}</div>
+            <div className='text-gray-500 text-sm'>{text}</div>
         </motion.div>
     </div>
   )

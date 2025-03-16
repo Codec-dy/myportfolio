@@ -1,10 +1,15 @@
-import React, { useContext } from 'react'
-import { projects, } from '../assets/assets'
-import ViewGallery from '../components/viewGallery';
+import React, { useContext, useEffect, useState } from 'react'
+// import { projects, } from '../assets/assets'
+import ViewGallery from '../components/ViewGallery';
 import { PortfolioContext } from '../context/portfolioContext';
+import { getData } from '../components/Utils/crud';
 
 const Projects = () => {
-  const { chunkProjects } = useContext(PortfolioContext);
+  const { chunkProjects,refresh,api } = useContext(PortfolioContext);
+ const [projects, setProjects] = useState([]);
+  useEffect(() => {
+        getData(`${api}?model=project&getAll=true`,setProjects)
+    },[refresh]);
 
   const projectChunks = chunkProjects(projects, Math.ceil(projects.length/3));
 

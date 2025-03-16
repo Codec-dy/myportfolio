@@ -10,9 +10,9 @@ import Experience from '../components/Experience'
 
 const Landing = () => {
   return (
-    <div >
+    <div className="flex flex-col gap-2">
        <FrontHomepage />
-       <div className='h-[100vh] flex items-center'><AboutCard img={aboutme.backimg} text={aboutme.education} colType={'sm:flex-row-reverse'}/></div>
+       <div className='h-[100vh] flex items-center '><AboutCard img={aboutme.backimg} text={aboutme.education} colType={'sm:flex-row-reverse'}/></div>
        <SkillsCardSlide/>
        <LatestWorks />
        <Experience />

@@ -1,18 +1,30 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import ViewGallery from '../components/ViewGallery'
+import { PortfolioContext } from '../context/portfolioContext';
+import { getData } from '../components/Utils/crud';
 
-import ViewGallery from '../components/viewGallery'
 
 const Certificates = () => {
+    const {chunkProjects,api} = useContext(PortfolioContext);
+    const [chunks,setChunks] = useState()
+    const [certs, setCerts] = useState()
   
-  
+    useEffect(()=>{
+      getData(`${api}?model=certificates&getAll=true`,setCerts)
+    },[])
 
-  return (
+    useEffect( () => {
+      // console.log(certs)
+        if(certs){
+          setChunks(chunkProjects(certs, Math.ceil(certs.length/3)))
+        }
+      }, [certs]);
+      return chunks?(
     <div>
-      <ViewGallery type={'cert'}/>
-        {/* {certificates.length?(certificates.map(certificate => <CertificateCard key={certificate.id} txt={'Completed a Udemy Course on Portfolios'} id={certificate.id} link={certificate.link} title={certificate.title} img={certificate.img} date={certificate.date} institute={certificate.institution} />)):"No certificates to show"} */}
+      <ViewGallery projectChunks={chunks} type="cert"/>
     
     </div>
-  )
+  ):""
 }
 
 export default Certificates

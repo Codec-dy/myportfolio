@@ -10,6 +10,9 @@ const PortfolioContextProvider = (props) => {
   const [displayProject,setDisplayProject] = useState(false);
   const [cert, setCert] = useState(1);
   const [displayImg,setDisplayImg] = useState();
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [editable, setEditable] = useState({});
+  const [refresh,setRefresh] = useState(false);
   
   const chunkProjects = (arr, size) => {
       const chunks = [];
@@ -18,8 +21,9 @@ const PortfolioContextProvider = (props) => {
       }
       return chunks;
     };
+    const api  = "http://localhost:3000/api/collection"
 
-  const value = {projectId, setProjectId,displayProject,setDisplayProject,cert,setCert,chunkProjects,displayImg,setDisplayImg}
+  const value = {api,projectId, setProjectId,displayProject,setDisplayProject,cert,setCert,chunkProjects,displayImg,setDisplayImg,isAuthenticated, setIsAuthenticated,editable,setEditable,setRefresh,refresh};  
   return (
     <PortfolioContext.Provider value={value}>
       {props.children}
