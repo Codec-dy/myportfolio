@@ -5,6 +5,7 @@ import App from './App.jsx'
 import { BrowserRouter as Router } from 'react-router-dom'
 import PortfolioContextProvider from './context/portfolioContext.jsx'
 
+
 createRoot(document.getElementById('root')).render(
   <Router >
     <PortfolioContextProvider>
