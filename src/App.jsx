@@ -1,8 +1,6 @@
 import { useContext, useState } from 'react'
 import "react-toastify/dist/ReactToastify.css";
 import {ToastContainer} from 'react-toastify';
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Landing from './pages/Landing'
 import Contact from './pages/Contact'
