@@ -52,7 +52,7 @@ const convertBase64 = (file) => {
     for(var key in content){
       formData.append(key, content[key]);
     }
-    
+    console.log(api)
     // axios.post("/upload", formData, { headers: { "Content-Type": "multipart/form-data" } });
      axios.post(api,formData, { headers: { "Content-Type": "multipart/form-data" } })
           .then((response) => {

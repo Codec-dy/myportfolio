@@ -24,7 +24,7 @@ const ProjectPage = () => {
   
   useEffect( () => {
     if(project && project.category=='Designs'){
-      getData(`http://localhost:3000/api/collection?model=design&getAll=true`,setDesigns)
+      getData(`${api}?model=design&getAll=true`,setDesigns)
     }
   }, [project]);
 

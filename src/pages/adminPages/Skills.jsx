@@ -5,7 +5,6 @@ import { getData } from '../../components/Utils/crud';
 import AdminEditDelete from '../../components/admin/AdminEditDelete';
 import Button from '../../components/Button';
 import Card from '../../components/Card';
-import AddSkills from '../../components/admin/AddSkills';
 import CrudComponent from '../../components/admin/CrudComponent';
 import AddComponent from '../../components/admin/AddComponent';
 

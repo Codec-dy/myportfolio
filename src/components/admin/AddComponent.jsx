@@ -16,7 +16,7 @@ const AddComponent = ({type,title,cancel}) => {
             case "skills":
                 return {description:''}
             case "experience":
-                return {title:'', company: '', location: '', date: '', description: ''}
+                return {title:'', company: '', location: '', date: '', summary: ''}
         }
     }
 
@@ -37,7 +37,7 @@ const AddComponent = ({type,title,cancel}) => {
           <img src={preview} alt="Preview" className="w-40 h-40 object-cover rounded" />
         </div>
       )}
-         <div onClick={()=>{handleAdd(`${api}?model=${type}`,add),cancel(false),setRefresh('add')}}><Button text={'Add to Collection'}/></div> <span onClick={()=>{cancel(false)}}><Button text={"Cancel"}/> </span>
+         <div onClick={()=>{handleAdd(`${api}/?model=${type}`,add),cancel(false),setRefresh('add')}}><Button text={'Add to Collection'}/></div> <span onClick={()=>{cancel(false)}}><Button text={"Cancel"}/> </span>
     </div>
   )
 }

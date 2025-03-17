@@ -25,6 +25,7 @@ import GS_forageCert from "../certificates/GS_completion_cert.pdf"
 import infosec from "../certificates/infosec.pdf"
 // Projects imports
 import background1 from './background1.jpg'
+import foreground from './background1.jpeg'
 import bgInfoPic from './bgInfoPic.jpg'
 import eduPic from './eduPic.webp'
 import skillsPic from './skillsPic.jpg'
@@ -36,6 +37,7 @@ import ecommerce from '../projects/ecommerce.png'
 export const graphicDesignImages = []
 
 export const assets = {
+    foreground,
    address,
     telephone,
     email,
