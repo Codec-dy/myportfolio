@@ -8,8 +8,8 @@ import 'react-lazy-load-image-component/src/effects/blur.css'
 
 const FrontHomepage = () => {
   return (
-    <div className='flex flex-col sm:flex-row sm:items-start items-center m-auto justify-center gap-4'>
-        <div className='max-h-[500px] overflow-hidden'>
+    <div className='w-full flex flex-col sm:flex-row sm:items-start items-center m-auto justify-center gap-4'>
+        <div className='max-h-[500px] overflow-hidden max-w-full'>
             <LazyLoadImage src={assets.foreground} effect='blur' alt="umage" className='h-[100%] max-w-[400px]'/>
         </div>
         <div className='flex flex-col gap-4 justify-between h-[100%] '>

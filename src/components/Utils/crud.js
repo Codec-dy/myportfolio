@@ -19,8 +19,8 @@ const convertBase64 = (file) => {
   });
 };
 
-  const handleDelete = (api,id,model) => {
-    axios.delete(`${api}/${id}?${model}`)
+  const handleDelete = async (api,id,model) => {
+    await axios.delete(`${api}/${id}?${model}`)
       .then((response) => {
         // setRefresh(!refresh);
         toast.success(response.data);
@@ -31,12 +31,12 @@ const convertBase64 = (file) => {
   };
 
 
-  const handleEdit = (api, updatedExperience,model) => {
+  const handleEdit = async (api, updatedExperience,model) => {
     const formData = new FormData();
     for(var key in updatedExperience){
       formData.append(key, updatedExperience[key]);
     }
-    axios.put(`${api}?${model}`, formData, { headers: { "Content-Type": "multipart/form-data" } })
+    await axios.put(`${api}?${model}`, formData, { headers: { "Content-Type": "multipart/form-data" } })
       .then((response) => {
         toast.success(response.data);
         // setRefresh(!refresh);
@@ -46,7 +46,7 @@ const convertBase64 = (file) => {
       });
   };
 
-  const handleAdd = (api,content) => {
+  const handleAdd = async (api,content) => {
     // Logic to add experience
     const formData = new FormData();
     for(var key in content){
@@ -54,7 +54,7 @@ const convertBase64 = (file) => {
     }
     console.log(api)
     // axios.post("/upload", formData, { headers: { "Content-Type": "multipart/form-data" } });
-     axios.post(api,formData, { headers: { "Content-Type": "multipart/form-data" } })
+    await axios.post(api,formData, { headers: { "Content-Type": "multipart/form-data" } })
           .then((response) => {
             toast.success(response.data);
           }).catch((error) => {
